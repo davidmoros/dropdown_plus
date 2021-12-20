@@ -179,7 +179,7 @@ class DropdownFormFieldState<T> extends State<DropdownFormField>
           child: FormField(
             validator: (str) {
               if (widget.validator != null) {
-                widget.validator!(_effectiveController!.value);
+                return widget.validator!(_effectiveController!.value);
               }
             },
             onSaved: (str) {
